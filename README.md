@@ -15,3 +15,9 @@ Start the tool by installing the necessary requirements and running main.py!
 
 ### Screencast Tutorial for Usage of Application
 unlisted video uploaded on youtube (5min YT) 
+
+
+
+## Contact
+fehlende Kontaktdaten oder nur mein Code
+- Jasper Wiltfang ([LinkedIn](https://www.linkedin.com/in/jasper-wiltfang))
