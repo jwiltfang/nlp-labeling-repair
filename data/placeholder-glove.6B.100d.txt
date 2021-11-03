@@ -1,0 +1,2 @@
+Please download the nlp model from https://www.kaggle.com/danielwillgeorge/glove6b100dtxt and put it into folder nlp_label_quality/data/ to use the tool (no name changes!) 
+name must be "glove.6B.100d.txt"
