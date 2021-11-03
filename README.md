@@ -13,7 +13,8 @@ Please download the following nlp model and place it into folder "nlp_label_qual
 ### 2) Install necessary requirements and start main.py
 
 Install the necessary requirements that can be found in the requirements.txt
-https://user-images.githubusercontent.com/922917/125647537-09db9217-a518-4590-bdd7-21e9832bd5e8.png
+![image](https://user-images.githubusercontent.com/93436324/140188257-68c1040e-bd9d-47ac-86b7-28815461f30c.png)
+
 
 ### 3) Select event logs for repair
 
