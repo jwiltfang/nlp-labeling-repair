@@ -1,23 +1,31 @@
 # NLP-enabled Labeling Repair in Event Logs
-An application for Natural Language Processing Labeling Repair (NLPLR). NLPLR is a Python standalone application that demonstrates the use of Natural Language Processing for detection and includes an interactive repair approach. It is an implementation of the approach presented in "Application of Natural Language Processing for Detection and 
+
+An application for Natural Language Processing Labeling Repair (NLPLR). NLPLR is a Python standalone application that demonstrates the use of Natural Language Processing for detection and includes an interactive repair approach. It is an implementation of the approach presented in "Application of Natural Language Processing for Detection and
 Interactive Repair of Labeling Anomalies in Event Logs".
 
 ## How it works
 
-### 1) Get the NLP model files
-Please download the following nlp model and place it into folder "nlp_label_quality/data/" named "glove.6B.100d.txt". 
-https://www.kaggle.com/danielwillgeorge/glove6b100dtxt
-Start the tool by installing the necessary requirements and running main.py!
+### 1) Download NLP model files and put into correct folder
 
-### 2) Start main.py
+Please download the following nlp model and place it into folder "nlp_label_quality/data/" named "glove.6B.100d.txt".
+<https://www.kaggle.com/danielwillgeorge/glove6b100dtxt>
+
+### 2) Install necessary requirements and start main.py
+
+Install the necessary requirements that can be found in the requirements.txt
+
 ### 3) Select event logs for repair
+
+Select the event log you want to repair through the import button
+
 ### 4) Select repair suggestions that are provided by tool
 
 ### Screencast Tutorial for Usage of Application
-unlisted video uploaded on youtube (5min YT) 
 
-
+unlisted video uploaded on youtube (5min YT)
 
 ## Contact
-fehlende Kontaktdaten oder nur mein Code
+
+fehlende Kontaktdaten
+
 - Jasper Wiltfang ([LinkedIn](https://www.linkedin.com/in/jasper-wiltfang))
