@@ -7,7 +7,7 @@ Interactive Repair of Labeling Anomalies in Event Logs".
 
 ### 1) Download NLP model files and put into correct folder
 
-Please download the following nlp model and place it into folder "nlp_label_quality/data/" named "glove.6B.100d.txt".
+Please download the following nlp model and place it into folder "nlp_label_quality/data/" and replace the placeholder with the following name "glove.6B.100d.txt".
 <https://www.kaggle.com/danielwillgeorge/glove6b100dtxt>
 
 ### 2) Install necessary requirements and start main.py
