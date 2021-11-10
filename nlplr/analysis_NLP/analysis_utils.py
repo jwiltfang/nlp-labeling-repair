@@ -1,4 +1,4 @@
-from nlplr.utils import matrix_eval
+from nlplr.utils import matrix_eval, exe_utils
 from nlplr.analysis_NLP.attribute_value import Attribute, AttributeValue
 from nlplr.repair.repair_options import RepairOption
 from nlplr.analysis_NLP.analysis_options import AnalysisOption
@@ -10,6 +10,8 @@ import numpy as np
 
 from typing import Dict, List, Tuple, Union, Any
 import logging
+import os
+import sys
 
 logger = logging.getLogger(__name__)
 
@@ -130,16 +132,15 @@ def _check_antonymy(antonym_library: Dict[str, List[str]],
     return total_antonym_set
 
 
-def get_antonyms_of_two_terms_from_wordnet(term1_synsets: Dict[str, List['Synset']],
-                                           term2_synsets: Dict[str, List['Synset']]) -> Dict[str, List[str]]:
+def get_antonyms_of_two_terms_from_wordnet(term1_synsets, term2_synsets) -> Dict[str, List[str]]:
     """
     Return the antonym both terms and their corresponding synsets share
 
     Parameters
     ----------
-    term1_synsets
+    term1_synsets:  Dict[str, List['Synset']]
         set of synsets for each value in the term
-    term2_synsets
+    term2_synsets:  Dict[str, List['Synset']]
         set of synsets for each value in the term
 
     Returns
@@ -205,9 +206,10 @@ def get_antonyms_from_verbocean() -> Dict[str, List[str]]:
         all antonyms from verbocean saved in a dictionary
     """
     input_file = 'data/verbocean.txt'
+    verbocean_link = exe_utils.resource_path(input_file)
     rel_to_observation = ["opposite-of"]
     antonym_library = {}
-    with open(input_file) as f:
+    with open(verbocean_link) as f:  # changed verbocean link
         line = f.readline()
         while line:
             if not line.startswith("#"):

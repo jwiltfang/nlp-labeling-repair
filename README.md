@@ -21,6 +21,17 @@ Select the event log you want to repair through the import button
 
 ### 4) Select repair suggestions that are provided by tool
 
+Explanations for values
+'Theoretical Assumption: Decreasing probability of correct assignment of Original Label if occurence is lower than Suggested Label.\n' \
+                    'Numerical values can be sorted manually by clicking on column title.\n\n'
+                    'Glove Result: similarity value based on glove model_glove\n'
+                    'Tfidf result: similarity value based on \'term frequency - inverted document fequency\'\n'
+                    'Depth: depth of analysis; 2 -> second highest value of sorted similarity based on glove\n\n'
+                    '\'Occurence\' counts total appearance within event eventlog.\n'
+                    '\'Original Label\' will be replaced by \'Suggested Label\' in repaired event eventlog.'
+
+        }
+
 ### Screencast Tutorial for Usage of Application
 
 unlisted video uploaded on youtube (5min YT)

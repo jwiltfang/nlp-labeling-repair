@@ -1,3 +1,4 @@
+from nlplr.utils import exe_utils
 from nlplr.utils.label_utils import difference_of_list_both, difference_of_str_both
 
 import spacy
@@ -12,6 +13,8 @@ from statistics import mean
 from typing import List, Dict, Tuple
 import logging
 import time
+import os
+import sys
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -165,6 +168,7 @@ class GloVeModel(Model):  # TODO what is the correct docstring for class attribu
         # TODO make choice available for GloVe model
         try:
             tic = time.perf_counter()
+            model_file = exe_utils.resource_path(model_file)
             binary = self.check_if_binary(model_file)
             if not binary:
                 glove_file, model_file = model_file, get_tmpfile('glove.word2vec.txt')
@@ -172,6 +176,7 @@ class GloVeModel(Model):  # TODO what is the correct docstring for class attribu
             self.model = KeyedVectors.load_word2vec_format(model_file, binary=binary)
             self.similarity_index = WordEmbeddingSimilarityIndex(self.model)
             toc = time.perf_counter()
+            
             logger.info(f'GloVe model loaded in {toc - tic:0.4f} seconds')
         except FileNotFoundError:
             logger.exception('GloVe Model could not be loaded.')

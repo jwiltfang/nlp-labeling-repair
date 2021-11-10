@@ -17,7 +17,7 @@ if not logger.hasHandlers():  # To ensure reload() doesn't add another one
     log_file.setFormatter(file_formatter)
 
     logger.addHandler(log_stream)
-    # logger.addHandler(log_file)  # TODO reactivate
+    logger.addHandler(log_file)  # TODO reactivate
     logger.setLevel(logging.DEBUG)
     logger.propagate = False
     logger.disabled = False

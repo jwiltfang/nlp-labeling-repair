@@ -39,7 +39,7 @@ class LogExporter:
         try:
             if self.save_location.endswith('.xes'):
                 self._export_xes(log, self.save_location)
-            elif self.save_location.endswith('.csv'):
+            elif self.save_location.endswith('.csv'):  # not available
                 self._export_csv(log, self.save_location)
             else:
                 return
@@ -65,5 +65,4 @@ class LogExporter:
 
     @staticmethod
     def _export_csv(repaired_log: pm4py.objects.log.log.EventLog, new_filename: str) -> None:
-        dataframe = log_converter.apply(repaired_log, variant=log_converter.Variants.TO_DATA_FRAME)
-        dataframe.to_csv(new_filename)
+        pass

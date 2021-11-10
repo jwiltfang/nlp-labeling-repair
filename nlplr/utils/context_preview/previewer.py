@@ -4,6 +4,9 @@ from nlplr.utils.context_preview.visualizer import HeuristicsGraph
 
 from pm4py.objects.log.log import EventLog
 
+import tkinter as tk
+from tkinter import filedialog
+
 from typing import List, Dict
 import os
 from datetime import datetime
@@ -18,7 +21,7 @@ def preview_context(log, save_location, filename, selected_words):
 class ContextPreviewer:
     def __init__(self, log: EventLog, save_location: str, filename: str):
         self.log = log  # original log
-        self.save_location: str = save_location
+        self.save_location: str = self._get_save_location(filename)
         self.filename: str = filename
 
     def preview_context_pdf(self, selected_words: Dict[str, List[str]]):
@@ -61,3 +64,11 @@ class ContextPreviewer:
         lower = 10 ** (n - 1)
         upper = 10 ** n - 1
         return random.randint(lower, upper)
+
+    def _get_save_location(self, filename: str, prefix: str = 'rep'):
+        root = tk.Tk()
+        root.withdraw()
+        preview_dir = filedialog.askdirectory(initialdir=None,
+                                            title='Select Directory for Preview File')
+        root.destroy()
+        return os.path.abspath(preview_dir)

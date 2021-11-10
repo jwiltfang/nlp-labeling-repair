@@ -41,6 +41,7 @@ class TkEventController(Controller):
         front-end package
     """
     def __init__(self):
+        logger.info('controller creation')
         super().__init__()
         self.model = TkModel()
         self.view = TkView()
@@ -49,6 +50,9 @@ class TkEventController(Controller):
         self.eval = True
         self.nlp = None
         self.glove = None
+
+        self.preview_save_location = 'context_pdfs'
+        logger.info('controller created')
 
     def start(self, analysis_options=None):
         self.model.setup_analyses(analysis_options)
@@ -75,7 +79,7 @@ class TkEventController(Controller):
 
             relevant_attributes, attributes_list = pre_analysis.filter_attributes(self.model.log)
             self.model.relevant_attributes = relevant_attributes
-            self.model.attributes_list = relevant_attributes
+            self.model.attributes_list = attributes_list
 
             self.update_content_after_import_log()
 
@@ -102,9 +106,8 @@ class TkEventController(Controller):
         selected_words = {
             'correct': correct_value,
             'incorrect': incorrect_values
-        }
-        save_location = 'context_pdfs'
-        cont_previewer = previewer.ContextPreviewer(self.model.log, save_location, self.model.filename)
+            }
+        cont_previewer = previewer.ContextPreviewer(self.model.log, self.preview_save_location, self.model.filename)
         cont_previewer.preview_context_pdf(selected_words)
 
     def handle_click_export_log(self):

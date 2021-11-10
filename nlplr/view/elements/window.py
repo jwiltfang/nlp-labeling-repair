@@ -1,6 +1,7 @@
 from nlplr.view.elements.menubar import Menubar
 from nlplr.view.elements.frames.f_start import StartFrame
 from nlplr.view.elements.frames.f_repair import RepairFrame
+from nlplr.utils import exe_utils
 
 import tkinter as tk
 import logging
@@ -21,7 +22,7 @@ class Window(tk.Tk):
         self.settings = {
             'geometry': '1000x600',
             'title': 'NLP Log Repair Client',
-            'iconfile': r'nlplr/view/elements/icons/icon.png',
+            'iconfile': exe_utils.resource_path('nlplr/view/elements/icons/icon.png'),
             'full_screen_state': False
         }
         self.bindings = {

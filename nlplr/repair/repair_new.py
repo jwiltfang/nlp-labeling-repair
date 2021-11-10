@@ -68,12 +68,6 @@ class RepairTool:
         for trace in log:
             for event in trace:
                 event_changed = False  # report if any changes were made in the program
-                # print(f'Event: {event}')
-                # print('test')
-                # if event['concept:name'] == 'Permit ABBROVED':
-                #     print('2:', event)
-                # if event.get('concept:name') == 'Permit ABBROVED ':
-                #     print('1:', event)
                 for condition in self.repair_conditions:
                     condition = condition.repair_dict
                     attr_name = condition.get('attribute')

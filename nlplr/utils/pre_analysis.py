@@ -3,6 +3,7 @@ import nlplr.utils.data_utils as data_utils
 import pm4py
 from pm4py.algo.filtering.log.attributes import attributes_filter
 
+from dateutil.parser import parse
 from typing import List
 import logging
 
