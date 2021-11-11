@@ -23,7 +23,7 @@ class Attribute:
         self.id: int = Attribute.__id
         self.attr: str = attr
         self.size: int = len(values)
-        self.nlp: SpacyModel = nlp
+        self.nlp: SpaCyModel = nlp
         self.glove: GloVeModel = glove
         self.attr_values: List[AttributeValue] = self._initialize_attributevalue_classes(values)
         self.matrix_content: Dict[str, List[np.ndarray]] = {}
