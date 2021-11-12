@@ -85,7 +85,7 @@ It is recommended to run multiple analyses. The first ones are generally for syn
 
 A demonstration video is provided here:
   
-[NLP Labeling Repair - Demo](https://www.youtube.com/watch?v=VqrHj7RaFXQ)
+[NLP Labeling Repair - Demo](https://youtu.be/4bGcbMgoxak)
 
 ## Contact
 
