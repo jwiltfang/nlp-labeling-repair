@@ -7,3 +7,6 @@
 # ignore local NLP model for commits
 glove.6B.100d.txt
 
+# output folder for exe
+/output
+
