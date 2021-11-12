@@ -78,7 +78,7 @@ After selection of repair options, you need to actually run the repair by pressi
   
 Furthermore, at any point during while using the tool, you are able to export the event log. Especially at the end of your iterative repair process, please export the event log as the temporary log within the tool is not exported automatically.
 
-It is recommended to let multiple analyses run. The first ones are generally for syntax errors and afterwards, the tool detects semantic errors. Please use the full set of analyses to make sure that no anomalies stay in the log. Different NLP models are used to make sure that various errors are detected.
+It is recommended to run multiple analyses. The first ones are generally for syntax errors and afterwards, the tool detects semantic errors. Please use the full set of analyses to make sure that no anomalies stay in the log. Different NLP models are used to make sure that various errors are detected.
 
 ### Screencast Tutorial for Usage of Application
 
