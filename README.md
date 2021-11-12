@@ -74,7 +74,11 @@ Hold 'Ctrl' to select multiple values (color-scheme: <blue>):
 
 ### 7) Run Repair, Next Analysis or Export Log
 
-The three buttons from below are used to either actually repair all the options you have chosen, export the current log that is up-to-date with all repair options that were already run or you can another analysis to see if other analysis setups find other analysis.
+After selection of repair options, you need to actually run the repair by pressing 'Run Repair' at the bottom of the window. It is very important that you do not skip this step!
+  
+Furthermore, at any point during while using the tool, you are able to export the event log. Especially at the end of your iterative repair process, please export the event log as the temporary log within the tool is not exported automatically.
+
+It is recommended to let multiple analyses run. The first ones are generally for syntax errors and afterwards, the tool detects semantic errors. Please use the full set of analyses to make sure that no anomalies stay in the log. Different NLP models are used to make sure that various errors are detected.
 
 ### Screencast Tutorial for Usage of Application
 
