@@ -58,6 +58,7 @@ In the right column, you can select the repair options that you deem useful to i
 ![image](https://user-images.githubusercontent.com/93436324/141465491-83b564b2-6612-4579-858a-0bdf4227d968.png)
 
 **How to select repair suggestions**
+
 Select repair suggestions that are provided by tool through buttons on bottom.
 If a repair is selected, all values that are 'Incorrect Value' in the original event log will be replaced by 'Correct Value' in the repaired event log.
 
@@ -82,7 +83,9 @@ It is recommended to run multiple analyses. The first ones are generally for syn
 
 ### Screencast Tutorial for Usage of Application
 
-unlisted video uploaded on youtube (5min YT)
+A demonstration video is provided here:
+  
+[NLP Labeling Repair - Demo](https://www.youtube.com/watch?v=VqrHj7RaFXQ)
 
 ## Contact
 
