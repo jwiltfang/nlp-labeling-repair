@@ -6,37 +6,80 @@ An application for Natural Language Processing Labeling Repair (NLPLR). NLPLR is
 
 ### 1) Download NLP model files and put into correct folder
 
-Please download the nlp model and place it into folder "nlp_label_quality/data/" and replace the placeholder with the following name "glove.6B.100d.txt".
-[here]<https://www.kaggle.com/danielwillgeorge/glove6b100dtxt>
+Please download the [nlp model for GloVe](<https://www.kaggle.com/danielwillgeorge/glove6b100dtxt>) and replace the placeholder in folder "/data" with the following name "glove.6B.100d.txt".
 
 ### 2) Install necessary requirements and start main.py
 
-Install the necessary requirements that can be found in the requirements.txt
-![import_page](https://user-images.githubusercontent.com/93436324/140188257-68c1040e-bd9d-47ac-86b7-28815461f30c.png)
+Install the necessary requirements and start main.py (or main.exe if you use the executable).
+![image](https://user-images.githubusercontent.com/93436324/141463850-c2f47891-f6bd-4f00-9ad1-e620e5b96f69.png)
 
-### 3) Select event logs for repair
+### 3) Import Event Log to Repair
 
-Select the event log you want to repair through the import button
+Select the event log through the import button and browse your computer to select a .xes-file that needs repair.
+![image](https://user-images.githubusercontent.com/93436324/141463970-89b06bd1-b090-4111-8d2a-ffc298b07ad5.png)
 
-### 4) Select repair suggestions that are provided by tool
+### 4) Confirm which attributes shall be analyzed
 
-Explanations for values
-'Theoretical Assumption: Decreasing probability of correct assignment of Original Label if occurence is lower than Suggested Label.\n' \
-                    'Numerical values can be sorted manually by clicking on column title.\n\n'
-                    'Glove Result: similarity value based on glove model_glove\n'
-                    'Tfidf result: similarity value based on \'term frequency - inverted document fequency\'\n'
-                    'Depth: depth of analysis; 2 -> second highest value of sorted similarity based on glove\n\n'
-                    '\'Occurence\' counts total appearance within event eventlog.\n'
-                    '\'Original Label\' will be replaced by \'Suggested Label\' in repaired event eventlog.'
+Select pre-filtered attributes for all string values that can be analyzed, press "Confirm Selection" 
+![image](https://user-images.githubusercontent.com/93436324/141464141-85e8e3bf-0a6b-4bad-ad2f-8bc0dff96b2d.png)
 
-        }
+### 5) Start Analysis
+
+Press "Start Analysis" after confirming the attributes to be analyzed and wait for results to appear (it might take a few seconds).
+
+### 6) Interactively decide which selections are useful
+
+After the analysis has run, the window updates to show all the results that the tool has generated.
+
+**Information to help your decision:**
+
+In the left column, you can see all values that are considered correct. You can select these to see all repair options connected to this correct value.
+
+In the middle column, you can see an information tab that gives you details about the currently selected value from the left column.
+
+| Value | Meaning | Example |
+| ------------- |:-------------| :----- |
+| Attribute | attribute in event log  | concept:name |
+| Correct Value     | the value that is supposedly correct | 'Start Trip' |
+| Correct Processed | 'Correct Value' but preprocessed for NLP analysis (the value that was actually compared to 'Incorrect Processed') | 'start trip' |
+| Correct Freq | Number of occurences in the event log (higher numbers are less likely to be anomalous) | 6503 | 
+
+In the right column, you can select the repair options that you deem useful to increase the event log quality of your event log.
+
+| Value | Meaning | Example |
+| ------------- |:-------------| :----- |
+| Attribute | attribute in event log  | concept:name |
+| Incorrect Value     | the value that is supposedly incorrect | 'Begins Trip' |
+| Incorrect Processed | 'Incorrect Value' but preprocessed for NLP analysis (the value that was actually compared to 'Correct Processed') | 'begin trip' |
+| Incorrect Freq | Number of occurences in the event log | 53 |
+| NLP Result | similarity value based on NLP model after comparing 'Correct Processed' and 'Incorrect Processed' in Analysis | 0.9478... |
+| Antonyms | antonymous relationships between compared values (highly unlikely that values have similar meaning) | {'start':'end'} |
+
+![image](https://user-images.githubusercontent.com/93436324/141465491-83b564b2-6612-4579-858a-0bdf4227d968.png)
+
+**How to select repair suggestions**
+Select repair suggestions that are provided by tool through buttons on bottom.
+If a repair is selected, all values that are 'Incorrect Value' in the original event log will be replaced by 'Correct Value' in the repaired event log.
+
+Hold 'Ctrl' to select multiple values (color-scheme: <blue>):
+| Button | Action | Color |
+| ------------- |:-------------| :---: |
+| Clear Selection | clear your current selection  |  |
+| Reset Frame | reset frame to clear both selection and repair options |  |
+| Discard Elements | Mark options that you deem incorrect | <lightred> |
+| Elements to Repair | Mark options that you deem correct | <lightgreen> |
+| Next Value from Listbox | skip to next value from left column |  |
+
+![image](https://user-images.githubusercontent.com/93436324/141469598-ec428b01-faf0-45c7-aaf5-5653d548c140.png)
+
+### 7) Run Repair, Next Analysis or Export Log
+
+The three buttons from below are used to either actually repair all the options you have chosen, export the current log that is up-to-date with all repair options that were already run or you can another analysis to see if other analysis setups find other analysis.
 
 ### Screencast Tutorial for Usage of Application
 
 unlisted video uploaded on youtube (5min YT)
 
 ## Contact
-
-fehlende Kontaktdaten
 
 - Jasper Wiltfang ([LinkedIn](https://www.linkedin.com/in/jasper-wiltfang))
