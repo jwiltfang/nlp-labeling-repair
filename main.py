@@ -8,16 +8,15 @@ if __name__ == '__main__':
     analysis_options = AnalysisOptionsContainer()
     analysis_options.add_options([
         AnalysisOption(name='gram_lev', model='leven', preprocessing='processed_value', threshold=0.5),
-        AnalysisOption(name='gram_lev', model='leven', preprocessing='processed_value', threshold=0.3),
-        AnalysisOption('sem_glove', 'open', 'glove_tokens', fn='calc_similarity_list', threshold=0.8),
-        AnalysisOption('sem_glove2', 'open', 'glove_tokens', fn='calc_combine_max_list', threshold=0.8),
-        AnalysisOption('sem_glove3', 'spacy', 'spacy_tokens', fn='calc_similarity_difference_list', threshold=0.8),
-        AnalysisOption('sem_spacy', 'spacy', 'spacy_tokens', fn='calc_combine_filter_list', threshold=0.6)
-
+        AnalysisOption(name='gram_lev2', model='leven', preprocessing='processed_value', threshold=0.3),
+        AnalysisOption('sem_glove', 'open', 'glove_tokens', fn='calc_similarity_list', threshold=0.75),
+        AnalysisOption('sem_glove2', 'open', 'glove_tokens', fn='calc_similarity_difference_list', threshold=0.8),
+        AnalysisOption('sem_glove3', 'open', 'glove_tokens', fn='calc_combine_max_list', threshold=0.7),
+        AnalysisOption('sem_spacy', 'spacy', 'spacy_tokens', fn='calc_similarity_list', threshold=0.75),
+        AnalysisOption('sem_spacy', 'spacy', 'spacy_tokens', fn='calc_similarity_difference_list', threshold=0.8),
+        AnalysisOption('sem_spacy2', 'spacy', 'spacy_tokens', fn='calc_combine_max_list', threshold=0.7)
     ])
-    
-
-    # self.analysis_options = [['leven', 'gram_lev', 'processed_value', '_'],
+        # self.analysis_options = [['leven', 'gram_lev', 'processed_value', '_'],
     #                          ['leven', 'gram_lev2', 'processed_value', '_'],
     #                          ['leven', 'gram_lev3', 'processed_value', '_'],
     #                          [['open', 'sem_glove', 'glove_tokens', 'calc_similarity_list'],
