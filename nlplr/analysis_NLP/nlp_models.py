@@ -168,7 +168,7 @@ class GloVeModel(Model):  # TODO what is the correct docstring for class attribu
         # TODO make choice available for GloVe model
         try:
             tic = time.perf_counter()
-            model_file = exe_utils.resource_path(model_file)
+            # model_file = exe_utils.resource_path(model_file)
             binary = self.check_if_binary(model_file)
             if not binary:
                 glove_file, model_file = model_file, get_tmpfile('glove.word2vec.txt')

@@ -78,7 +78,7 @@ class LogoPanel(BaseFrame):
         Logo class that can be reused in different frames
         :param master:
         """
-        self.logo = Image.open(exe_utils.resource_path('nlplr/view/elements/icons/logo.PNG'))
+        self.logo = Image.open('nlplr/view/elements/icons/logo.PNG')  # exe_utils.resource_path()
         super().__init__(master, controller, callbacks, *args, **kwargs)
 
     def _setup_frame(self):

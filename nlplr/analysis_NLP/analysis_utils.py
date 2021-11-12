@@ -206,10 +206,10 @@ def get_antonyms_from_verbocean() -> Dict[str, List[str]]:
         all antonyms from verbocean saved in a dictionary
     """
     input_file = 'data/verbocean.txt'
-    verbocean_link = exe_utils.resource_path(input_file)
+    # verbocean_link = exe_utils.resource_path(input_file)
     rel_to_observation = ["opposite-of"]
     antonym_library = {}
-    with open(verbocean_link) as f:  # changed verbocean link
+    with open(input_file) as f:  # changed verbocean link
         line = f.readline()
         while line:
             if not line.startswith("#"):

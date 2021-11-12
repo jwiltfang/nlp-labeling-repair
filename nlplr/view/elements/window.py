@@ -22,7 +22,7 @@ class Window(tk.Tk):
         self.settings = {
             'geometry': '1000x600',
             'title': 'NLP Log Repair Client',
-            'iconfile': exe_utils.resource_path('nlplr/view/elements/icons/icon.png'),
+            'iconfile': 'nlplr/view/elements/icons/icon.png', # exe_utils.resource_path(
             'full_screen_state': False
         }
         self.bindings = {
