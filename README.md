@@ -81,8 +81,8 @@ Hold 'Ctrl' to select multiple values (color-scheme: <blue>).
 | :------------- |:-------------| :--- |
 | Clear Selection | clear your current selection  |  |
 | Reset Frame | reset frame to clear both selection and repair options |  |
-| Discard Elements | Mark options that you deem incorrect | <lightred> |
-| Elements to Repair | Mark options that you deem correct | <lightgreen> |
+| Discard Elements | Mark options that you deem incorrect | \<lightred> |
+| Elements to Repair | Mark options that you deem correct | \<lightgreen> |
 | Next Value from Listbox | skip to next value from left column |  |
 | Preview Context | selected repair options (green) will be shown in context of process model |  |
 
