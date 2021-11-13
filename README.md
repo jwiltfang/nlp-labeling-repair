@@ -11,7 +11,21 @@ Please download the [nlp model for GloVe](<https://www.kaggle.com/danielwillgeor
 ### 2) Install necessary requirements and start main.py
 
 Install the necessary requirements and start main.py (or main.exe if you use the executable).
+
+**Special requirements are:**
+Run on Windows with Python v3.8
+pm4py v2.2.1  
+spacy v2.3.2 + download NLP model with `python -m spacy download en_core_web_sm`  
+gensim v3.8.3  
+nltk v3.5  **
+
 ![image](https://user-images.githubusercontent.com/93436324/141463850-c2f47891-f6bd-4f00-9ad1-e620e5b96f69.png)
+
+### Screencast Demo to Use Application
+
+A demonstration video is provided here:
+  
+[NLP Labeling Repair - Demo](https://youtu.be/nNa0TCKHRU4)
 
 ### 3) Import Event Log to Repair
 
@@ -62,7 +76,7 @@ In the right column, you can select the repair options that you deem useful to i
 Select repair suggestions that are provided by tool through buttons on bottom.
 If a repair is selected, all values that are 'Incorrect Value' in the original event log will be replaced by 'Correct Value' in the repaired event log.
 
-Hold 'Ctrl' to select multiple values (color-scheme: <blue>):
+Hold 'Ctrl' to select multiple values (color-scheme: <blue>).  
 | Button | Action | Color |
 | ------------- |:-------------| :---: |
 | Clear Selection | clear your current selection  |  |
@@ -80,12 +94,6 @@ After selection of repair options, you need to actually run the repair by pressi
 Furthermore, at any point during while using the tool, you are able to export the event log. Especially at the end of your iterative repair process, please export the event log as the temporary log within the tool is not exported automatically.
 
 It is recommended to run multiple analyses. The first ones are generally for syntax errors and afterwards, the tool detects semantic errors. Please use the full set of analyses to make sure that no anomalies stay in the log. Different NLP models are used to make sure that various errors are detected.
-
-### Screencast Tutorial for Usage of Application
-
-A demonstration video is provided here:
-  
-[NLP Labeling Repair - Demo](https://youtu.be/4bGcbMgoxak)
 
 ## Contact
 
