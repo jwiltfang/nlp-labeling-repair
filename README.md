@@ -12,8 +12,8 @@ Please download the [nlp model for GloVe](<https://www.kaggle.com/danielwillgeor
 
 Install the necessary requirements and start main.py (or main.exe if you use the executable).
 
-**Special requirements are:**
-Run on Windows with Python v3.8
+**Special requirements are:**  
+Run on Windows with Python v3.8  
 pm4py v2.2.1  
 spacy v2.3.2 + download NLP model with `python -m spacy download en_core_web_sm`  
 gensim v3.8.3  
@@ -74,18 +74,25 @@ In the right column, you can select the repair options that you deem useful to i
 **How to select repair suggestions**
 
 Select repair suggestions that are provided by tool through buttons on bottom.
-If a repair is selected, all values that are 'Incorrect Value' in the original event log will be replaced by 'Correct Value' in the repaired event log.
-
+If a repair is selected, all values that are 'Incorrect Value' in the original event log will be replaced by 'Correct Value' in the repaired event log.  
 Hold 'Ctrl' to select multiple values (color-scheme: <blue>).  
+
 | Button | Action | Color |
-| ------------- |:-------------| :---: |
+| :------------- |:-------------| :--- |
 | Clear Selection | clear your current selection  |  |
 | Reset Frame | reset frame to clear both selection and repair options |  |
 | Discard Elements | Mark options that you deem incorrect | <lightred> |
 | Elements to Repair | Mark options that you deem correct | <lightgreen> |
 | Next Value from Listbox | skip to next value from left column |  |
+| Preview Context | selected repair options (green) will be shown in context of process model |  |
 
+### Optional: Context Preview
+  
+Selected values for Repair can also be shown in context of the process model in a directly-follows graph. Please make sure that the selected repair options both make sense semantically, syntactically and in context. 
+  
 ![image](https://user-images.githubusercontent.com/93436324/141469598-ec428b01-faf0-45c7-aaf5-5653d548c140.png)
+  
+
 
 ### 7) Run Repair, Next Analysis or Export Log
 
